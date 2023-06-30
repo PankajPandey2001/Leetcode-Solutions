@@ -83,7 +83,13 @@ class Solution {
            int right1 = 0 ; // meas right part mein array1 ka minimum element ; 
            int right2 = 0 ; // mean right part mein array 2 ka minimum element ; 
 
-
+             
+            if(mid > value) // means jitne lene h left side mein usse jyaa nhi hoene chahiye
+            {
+                high = mid-1 ; 
+                continue; 
+                
+            }
             if(mid == 0 )
             {
                 left1 = Integer.MIN_VALUE ;
@@ -105,21 +111,27 @@ class Solution {
 
 
            int  mid2 = value - mid ; 
+            
+            if(mid2 > nums2.length)
+            {
+                low = mid+1 ; 
+                continue ; 
+            }
              
-             if(mid2 < 0 || mid2 > nums2.length) // ye possible hi nhi h;
-             {
+//              if(mid2 < 0 || mid2 > nums2.length) // ye possible hi nhi h;
+//              {
 
-                 if(mid2 < 0)
-                 {
-                     // means arr1 ke jyada element le liye ; 
+//                  if(mid2 < 0)
+//                  {
+//                      // means arr1 ke jyada element le liye ; 
 
-                     high = mid-1 ; 
-                 }
-                 else
-                 low = mid+1 ; 
+//                      high = mid-1 ; 
+//                  }
+//                  else
+//                  low = mid+1 ; 
 
-                 continue ; 
-             }
+//                  continue ; 
+//              }
              if(mid2 == 0 )
             {
                 left2 = Integer.MIN_VALUE ;
