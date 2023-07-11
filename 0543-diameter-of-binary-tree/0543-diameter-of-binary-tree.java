@@ -15,6 +15,15 @@
  */
 class Solution {
 
+    /*
+
+       SEE VIDEO OF STRIVER BHAIYA 
+
+
+
+       
+    */
+
     static int answer = Integer.MIN_VALUE ; 
 
     public int diameterOfBinaryTree(TreeNode root) {
